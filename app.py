@@ -33,20 +33,6 @@ def results():
                                 content=VN)
     return render_template('reviewform.html', form=form)
 
-# @app.route('/thanks', methods=['POST'])
-# def feedback():
-#     feedback = request.form['feedback_button']
-#     review = request.form['review']
-#     prediction = request.form['prediction']
-
-#     inv_label = {'negative': 0, 'positive': 1}
-#     y = inv_label[prediction]
-#     if feedback == 'Incorrect':
-#         y = int(not(y))
-#     train(review, y)
-#     sqlite_entry(db, review, y)
-#     return render_template('thanks.html')
-
 if __name__ == '__main__':
 #     app.run(debug=True)
     app.run(port = '8080',host = '0.0.0.0', debug=True)
